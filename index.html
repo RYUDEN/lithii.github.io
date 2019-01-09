@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动画</title>
+    <style>
+        [class="animation"]{
+            position: relative;
+            background-color: rgb(83, 204, 235);
+            width: 100px;
+            height: 100px;
+            margin:20% auto;
+            /* animation: MOVE 3s; */
+            animation-name:MOVE;
+            animation-duration:0.5s;
+            animation-iteration-count:infinite;
+            /* animation-delay:2s;等待时间 */
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        @keyframes MOVE{
+            /* from{
+                transform: scale(0.5);
+                background-color: red;
+            }
+            to{
+                transform: scale(1.5);
+                background-color: blue;
+            } */
+            0%   {background: red; left:0px; top:0px;}
+            25%  {background: yellow; left:200px; top:0px;}
+            50%  {background: blue; left:200px; top:200px;}
+            75%  {background: green; left:0px; top:200px;}
+            100% {background: red; left:0px; top:0px;}
+        }
+        @media screen and (min-width: 480px) and (max-width: 680px) {
+            body {
+                background-color: lightgreen;
+            }
+            .animation{
+                animation-play-state: paused;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animation">
+        
+    </div>
+</body>
+</html>
